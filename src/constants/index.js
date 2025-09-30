@@ -161,8 +161,6 @@ const testimonials = [
   // },
 ];
 
- 
-
 const projects = [
   {
     name: "Blog",
@@ -203,8 +201,8 @@ const projects = [
     ],
     image: portfolio, // ✅ Use local image
     alt: "Portfolio",
-    source_code_link: "https://github.com/Rajeshesh/portfolio",
-    live_link: "https://mern-rajesh-portfolio.web.app/",
+    source_code_link: "https://github.com/imran333s/portfolio",
+    live_link: "https://imran-portfolio-s.netlify.app/",
   },
 ];
 
