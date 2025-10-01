@@ -4,6 +4,10 @@ import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
 
+// ✅ import local assets
+import menu from "../assets/menu.svg";
+import close from "../assets/close.svg";
+
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
@@ -11,16 +15,9 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      if (scrollTop > 100) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 100);
     };
-
     window.addEventListener("scroll", handleScroll);
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -32,23 +29,25 @@ const Navbar = () => {
         scrolled ? "bg-primary" : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex w-full max-w-7xl items-center justify-between">
+      <div className="relative mx-auto flex w-full max-w-7xl items-center justify-between">
+        {/* ✅ Centered Logo + Text */}
         <Link
           to="/"
-          className="flex items-center gap-2"
+          className="absolute left-1/2 z-10 flex -translate-x-1/2 items-center gap-2"
           onClick={() => {
             setActive("");
             window.scrollTo(0, 0);
           }}
         >
           <img src="./logo.png" alt="logo" className="h-9 w-9 object-contain" />
-          <p className="flex cursor-pointer text-[18px] font-bold text-white ">
+          <p className="flex cursor-pointer text-[18px] font-bold text-white">
             Imran &nbsp;
-            <span className="hidden sm:block"> | MERN Stack Developer</span>
+            <span className="hidden sm:block">| MERN Stack Developer</span>
           </p>
         </Link>
 
-        <ul className="hidden list-none flex-row gap-10 sm:flex">
+        {/* ✅ Desktop Nav Links */}
+        <ul className="ml-auto hidden list-none flex-row gap-10 sm:flex">
           {navLinks.map((nav) => (
             <li
               key={nav.id}
@@ -62,24 +61,22 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <div className="flex flex-1 items-center justify-end sm:hidden">
+        {/* ✅ Mobile Hamburger */}
+        <div className="z-20 ml-auto flex sm:hidden">
           <img
-            src={
-              toggle
-                ? "https://rajesh-mern-stack-portfolio-images.s3.ap-south-1.amazonaws.com/assets/close.svg"
-                : "https://rajesh-mern-stack-portfolio-images.s3.ap-south-1.amazonaws.com/assets/menu.svg"
-            }
+            src={toggle ? close : menu} // <-- using local assets
             alt="menu"
-            className="h-[28px] w-[28px] object-contain"
+            className="h-[28px] w-[28px] cursor-pointer object-contain"
             onClick={() => setToggle(!toggle)}
           />
 
+          {/* ✅ Mobile Dropdown */}
           <div
             className={`${
               !toggle ? "hidden" : "flex"
-            } black-gradient absolute right-0 top-20 z-10 mx-4 my-2 min-w-[140px] rounded-xl p-6`}
+            } black-gradient absolute right-4 top-16 z-30 min-w-[160px] rounded-xl p-6`}
           >
-            <ul className="flex flex-1 list-none flex-col items-start justify-end gap-4">
+            <ul className="flex flex-col gap-4">
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}
@@ -87,7 +84,7 @@ const Navbar = () => {
                     active === nav.title ? "text-white" : "text-secondary"
                   }`}
                   onClick={() => {
-                    setToggle(!toggle);
+                    setToggle(false);
                     setActive(nav.title);
                   }}
                 >
