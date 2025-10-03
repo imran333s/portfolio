@@ -77,19 +77,19 @@ function ProjectsSection() {
   //     .then((data) => setProjects(data))
   //     .catch((err) => console.log(err));
   // }, []);
-  
-useEffect(() => {
-  fetch("http://localhost:5000/api/projects")
-    .then((res) => {
-      console.log("Status:", res.status);
-      return res.json();
-    })
-    .then((data) => {
-      console.log("Fetched projects:", data);
-      setProjects(data);
-    })
-    .catch((err) => console.log("Fetch error:", err));
-}, []);
+
+  useEffect(() => {
+    fetch(`${process.env.REACT_APP_API_URL}/api/projects`)
+      .then((res) => {
+        console.log("Status:", res.status);
+        return res.json();
+      })
+      .then((data) => {
+        console.log("Fetched projects:", data);
+        setProjects(data);
+      })
+      .catch((err) => console.log("Fetch error:", err));
+  }, []);
 
   const getImage = (imageName) => {
     switch (imageName) {
