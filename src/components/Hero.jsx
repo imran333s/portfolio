@@ -22,11 +22,11 @@ const Hero = () => {
             <div className="h-5 w-5 rounded-full bg-[#915EFF]" />
             <div className="violet-gradient h-40 w-1 sm:h-80" />
           </div>
-          <motion.div variants={textVariant()}>
+          <motion.div variants={textVariant()} className="mt-[160px]">
             <h1 className={`${styles.heroHeadText} text-white`}>
               Hi, I'm <span className="text-[#915EFF]">Imran</span>
             </h1>
-            <p className={`${styles.heroSubText} mt-2 text-white-100`}>
+            <p className={`${styles.heroSubText} text-white-1z mt-2`}>
               I develop Full Stack Web Applications, using{" "}
               <br className="hidden sm:block" />
               <span className="gradient-text"> MERN Stack</span>
@@ -50,7 +50,7 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      <div className="flex-center-center mb-40 w-full ">
+      <div className="flex-center-center mt-10 w-full ">
         <a href="#about">
           <div className="flex h-[64px] w-[35px] items-start justify-center rounded-3xl border-4 border-secondary p-2">
             <motion.div

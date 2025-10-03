@@ -5,12 +5,18 @@ import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 import { Button } from "@mui/material";
-import { Email, LinkedIn, GitHub, ArrowOutward } from "@mui/icons-material";
+import {
+  Phone,
+  Email,
+  LinkedIn,
+  GitHub,
+  ArrowOutward,
+} from "@mui/icons-material";
 
 const Contact = () => {
   return (
     <>
-      <div className="flex flex-col-reverse gap-10 overflow-hidden md:mt-12 md:flex-row ">
+      <div className="flex flex-col-reverse gap-10 overflow-hidden md:mt-4 md:flex-row">
         <motion.div
           variants={slideIn("left", "tween", 0.1, 0.5)}
           className="flex-[0.75] rounded-2xl bg-black-100 p-8"
@@ -47,6 +53,11 @@ const Contact = () => {
                 </Button>
               </a>
             </div>
+            <a href="tel:+917362043095">
+              <Button variant="outlined" endIcon={<Phone />}>
+                Call
+              </Button>
+            </a>
           </div>
         </motion.div>
 
