@@ -9,32 +9,40 @@ app.use(cors());
 app.use(express.json());
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-}).then(() => console.log("MongoDB connected"))
-  .catch(err => console.log(err));
+mongoose
+  .connect(process.env.MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log("MongoDB connected"))
+  .catch((err) => console.log(err));
 
 // --- Schemas ---
 
 // Projects Schema
-const projectSchema = new mongoose.Schema({
-  name: String,
-  title: String,
-  description: String,
-  tech: [String],
-  github: String,
-  live: String,
-}, { timestamps: true });
+const projectSchema = new mongoose.Schema(
+  {
+    name: String,
+    title: String,
+    description: String,
+    tech: [String],
+    github: String,
+    live: String,
+  },
+  { timestamps: true },
+);
 
-const Project = mongoose.model("Project", projectSchema,"projects");
+const Project = mongoose.model("Project", projectSchema, "projects");
 
 // Contacts Schema
-const contactSchema = new mongoose.Schema({
-  name: String,
-  email: String,
-  message: String,
-}, { timestamps: true });
+const contactSchema = new mongoose.Schema(
+  {
+    name: String,
+    email: String,
+    message: String,
+  },
+  { timestamps: true },
+);
 
 const Contact = mongoose.model("Contact", contactSchema);
 
