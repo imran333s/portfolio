@@ -22,7 +22,7 @@ const Hero = () => {
             <div className="h-5 w-5 rounded-full bg-[#915EFF]" />
             <div className="violet-gradient h-40 w-1 sm:h-80" />
           </div>
-          <motion.div variants={textVariant()} className="mt-[160px]">
+          <motion.div variants={textVariant()} className="mt-[180px]">
             <h1 className={`${styles.heroHeadText} text-white`}>
               Hi, I'm <span className="text-[#915EFF]">Imran</span>
             </h1>
@@ -50,7 +50,7 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      <div className="flex-center-center mt-10 w-full ">
+      <div className="flex-center-center  mb-[200px] w-full">
         <a href="#about">
           <div className="flex h-[64px] w-[35px] items-start justify-center rounded-3xl border-4 border-secondary p-2">
             <motion.div
