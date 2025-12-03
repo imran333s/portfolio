@@ -1,4 +1,3 @@
-
 import React from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
@@ -7,7 +6,7 @@ import { SectionWrapper } from "../hoc";
 import { webLink, github } from "../assets"; // ✅ icons
 import { fadeIn, textVariant } from "../utils/motion";
 import ProjectsSection from "./ProjectsSection";
-
+import { InlineWidget } from "react-calendly";
 
 const ProjectCard = ({
   index,
@@ -87,9 +86,21 @@ const Works = () => (
       </motion.p>
     </div>
 
-     {/* ✅ Render ProjectsSection dynamically */}
+    {/* ✅ Render ProjectsSection dynamically */}
     <div className="flex-around-center mt-20 flex-wrap gap-7">
       <ProjectsSection />
+    </div>
+    {/* Calendly Booking Widget */}
+    <div className="mt-10 flex w-full flex-col items-center">
+      <h3 className="mb-5 text-center text-2xl text-white">
+        Book a 30-Minute Meeting
+      </h3>
+      <div className="max-w-1.5xl w-full">
+        <InlineWidget
+          url="https://calendly.com/imran33s786/30min"
+          styles={{ minWidth: "320px", height: "500px" }}
+        />
+      </div>
     </div>
   </>
 );

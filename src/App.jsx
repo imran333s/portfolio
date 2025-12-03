@@ -1,4 +1,4 @@
-import { BrowserRouter } from "react-router-dom";
+import useAnalytics from "./useAnalytics";
 
 import {
   About,
@@ -11,20 +11,21 @@ import {
 } from "./components";
 
 const App = () => {
+  useAnalytics(); // ✅ Now BrowserRouter exists above this
+
   return (
-    <BrowserRouter>
-      <div className="relative z-0 bg-primary">
-        <div className="bg-hero-pattern  bg-cover bg-center bg-no-repeat">
-          <Navbar />
-          <Hero />
-        </div>
-        <About />
-        <Experience />
-        <Works />
-        <Feedbacks />
-        <Contact />
+    <div className="relative z-0 bg-primary">
+      <div className="bg-hero-pattern bg-cover bg-center bg-no-repeat">
+        <Navbar />
+        <Hero />
       </div>
-    </BrowserRouter>
+      <About />
+      <Experience />
+      <Works />
+      <Feedbacks />
+      <Contact />
+      
+    </div>
   );
 };
 

@@ -21,8 +21,8 @@ const ProjectCard = ({
   live_link,
 }) => (
   <motion.div variants={fadeIn("up", "spring", index * 0.1 + 0.3, 0.7)}>
-    <div className="w-full rounded-2xl bg-tertiary p-5 sm:w-[360px]">
-      <div className="relative h-[230px] w-full">
+    <div className="w-full rounded-2xl bg-tertiary p-3 sm:w-[320px]">
+      <div className="relative h-[160px] w-full">
         <img
           src={image}
           alt={alt}
