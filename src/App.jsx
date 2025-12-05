@@ -1,4 +1,4 @@
-import useAnalytics from "./useAnalytics";
+import useAnalytics from "./utils/useAnalytics";
 
 import {
   About,
@@ -24,7 +24,6 @@ const App = () => {
       <Works />
       <Feedbacks />
       <Contact />
-      
     </div>
   );
 };
