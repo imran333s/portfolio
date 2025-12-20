@@ -191,7 +191,7 @@ const Contact = () => {
           variant="outlined"
           endIcon={<ArrowOutward />}
           component="a"
-          href="https://drive.google.com/file/d/1dVFjpT8UJKCUimn0xVy0duOwA8vF7gwU/view?usp=sharing"
+          href="https://drive.google.com/file/d/1b78Ytwhbj8iOPRVxOARL7rCS-XntFNma/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
         >

@@ -104,7 +104,7 @@ const projects = [
     image: e_commerce, // ✅ Use local image
     alt: "E-Commerce",
     source_code_link: "https://github.com/imran333s/my-blog",
-    live_link: "https://my-blog-s.netlify.app/",
+    live_link: "https://portfolio-three-mu-32.vercel.app/",
   },
   //   // {
   //   //   name: "Pro Connect Up",
