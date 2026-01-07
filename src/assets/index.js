@@ -1,5 +1,3 @@
- 
-
 import logo from "./logo.png";
 
 import web from "./web.png";
@@ -38,8 +36,8 @@ import mongodbCompass from "./tools/mongodbCompass.png";
 import postman from "./tools/postman.png";
 import ubuntu from "./tools/ubuntu.png";
 import Impress from "./tools/Impress.png";
-
 import e_commerce from "./e-commerce.png";
+import hotelBooking from "./hotel-Booking.png";
 import proConnectup from "./proConnectup.jpg";
 import portfolio from "./portfolio.png";
 
@@ -79,6 +77,7 @@ export {
   ubuntu,
   Impress,
   e_commerce,
+  hotelBooking,
   proConnectup,
   portfolio,
 };

@@ -30,6 +30,7 @@ import {
   ubuntu,
   Impress,
   e_commerce,
+  hotelBooking,
   proConnectup,
   portfolio,
 } from "../assets";
@@ -106,6 +107,22 @@ const projects = [
     source_code_link: "https://github.com/imran333s/my-blog",
     live_link: "https://portfolio-three-mu-32.vercel.app/",
   },
+  {
+    name: "Hotel Booking System",
+    description:
+      "A full-stack hotel booking platform with user and admin roles. Users can register, login, update profiles, manage bookings, and maintain wishlists. Admins can manage hotels, bookings, users, and content through a secure admin panel.",
+    tags: [
+      { name: "MERN", color: "blue-text-gradient" },
+      { name: "JWT Auth", color: "green-text-gradient" },
+      { name: "Admin Panel", color: "pink-text-gradient" },
+      { name: "MongoDB", color: "orange-text-gradient" },
+    ],
+    image: hotelBooking,
+    alt: "Hotel Booking System",
+    source_code_link: "https://github.com/imran333s/hotel-booking-system",
+    live_link: "https://YOUR-VERCEL-LINK.vercel.app",
+  },
+
   //   // {
   //   //   name: "Pro Connect Up",
   //   //   description:

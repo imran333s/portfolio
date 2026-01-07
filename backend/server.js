@@ -22,10 +22,11 @@ mongoose
 // Projects Schema
 const projectSchema = new mongoose.Schema(
   {
-    name: String,
+    name: { type: String, required: true },
     title: String,
     description: String,
     tech: [String],
+    image: String, // ✅ add this line
     github: String,
     live: String,
   },

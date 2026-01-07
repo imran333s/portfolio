@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import {
   e_commerce,
+  hotelBooking,
   portfolio,
   proConnectup,
   webLink,
@@ -99,6 +100,8 @@ function ProjectsSection() {
         return portfolio;
       case "proConnectup":
         return proConnectup;
+      case "hotelBooking": // ✅ THIS IS WHY IT WORKS
+        return hotelBooking;
       default:
         return portfolio;
     }
